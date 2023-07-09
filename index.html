@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css"><!--css-->
+    <!-- icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codewith.beki</title>
+</head>
+<body>
+    <div class="container">
+        <header>rate this content!
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+        </header>
+    </div>
+    <script>//js
+ const stars = document.querySelectorAll(".stars i");
+ stars.forEach((star, index1) => {
+   star.addEventListener("click", () => {
+     stars.forEach((star, index2) => {
+       index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
+     });
+   });
+ });
+
+    </script>
+</body>
+</html>
